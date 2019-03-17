@@ -1,0 +1,16 @@
+# パーセプトロンの簡単な実装
+# ANDゲート
+def AND(x1, x2):
+    # w1, w2: x1, x2のノードに対応する重み
+    # theta: Threshold
+    w1, w2, theta = 0.5, 0.5, 0.7
+    tmp = x1 * w1 + x2 * w2
+    if tmp <= theta:
+        return 0
+    elif tmp > theta:
+        return 1
+# 検証
+print("AND(0, 0): " + str(AND(0, 0)))
+print("AND(1, 0): " + str(AND(1, 0)))
+print("AND(0, 1): " + str(AND(0, 1)))
+print("AND(1, 1): " + str(AND(1, 1)))
