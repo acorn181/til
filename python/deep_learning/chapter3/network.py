@@ -35,7 +35,7 @@ def forward_sig(network, x):
     a3 = np.dot(z2, W3) + b3
     z3 = sigmoid(a3)
 
-    y = identity_function(a3)
+    y = identity_function(z3)
 
     return y
 
@@ -51,7 +51,7 @@ def forward_ReLU(network, x):
     a3 = np.dot(z2, W3) + b3
     z3 = ReLU(a3)
 
-    y = identity_function(a3)
+    y = identity_function(z3)
 
     return y
 
